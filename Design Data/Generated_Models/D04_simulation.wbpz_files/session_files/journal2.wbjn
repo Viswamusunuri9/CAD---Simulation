@@ -1,0 +1,117 @@
+# encoding: utf-8
+# 2020 R1
+SetScriptVersion(Version="20.1.164")
+system1 = GetSystem(Name="SYS")
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D02.step"))
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+model1.Exit()
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system2 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system1)
+geometry2 = system2.GetContainer(ComponentName="Geometry")
+geometry2.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D02.step"))
+modelComponent2 = system2.GetComponent(Name="Model")
+modelComponent2.Refresh()
+model2 = system2.GetContainer(ComponentName="Model")
+model2.Edit()
+favorites1 = EngData.LoadFavoriteItems()
+engineeringData1 = system2.GetContainer(ComponentName="Engineering Data")
+matl1 = engineeringData1.CreateMaterial(Name="ABS")
+matlProp1 = matl1.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp1.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["1040 [kg m^-3]"]])
+matlProp2 = matl1.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp2.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["2000000000 [Pa]"]])
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.35"]])
+EngData.EnableFilter(Enable=False)
+Save(Overwrite=True)
+model2.Exit()
+modelComponent2.Refresh()
+model2.Edit()
+Save(Overwrite=True)
+system3 = template1.CreateSystem(
+    Position="Right",
+    RelativeTo=system2)
+geometry2.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D03.step"))
+modelComponent2.Refresh()
+model2.Edit()
+model2.Exit()
+geometry2.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D03.step"))
+geometry3 = system3.GetContainer(ComponentName="Geometry")
+geometry3.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D03.step"))
+engineeringData2 = system3.GetContainer(ComponentName="Engineering Data")
+matl2 = engineeringData2.CreateMaterial(Name="ABS")
+matlProp3 = matl2.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp4 = matl2.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+geometry2.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D03.step"))
+model2.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+geometry2.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D04.step"))
+modelComponent2.Refresh()
+model2.Edit()
+matl3 = engineeringData1.CreateMaterial(Name="Glass Fiber")
+matl4 = engineeringData1.CreateMaterial(Name="Carbon Fiber")
+matlProp5 = matl3.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp6 = matl3.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp6.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["30000000000 [Pa]"]])
+matlProp6.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.22"]])
+matlProp5.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["2500 [kg m^-3]"]])
+matlProp7 = matl4.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp8 = matl4.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp8.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["70000000000 [Pa]"]])
+matlProp8.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.2"]])
+matlProp7.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["1600 [kg m^-3]"]])
+modelComponent2.Refresh()
+model2.Edit()
+Save(Overwrite=True)

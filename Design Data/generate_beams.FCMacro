@@ -1,0 +1,43 @@
+import FreeCAD as App
+import ImportGui
+import Part
+import csv
+import os
+
+# ✅ Update paths
+csv_path = r"C:/Users/viswa/Documents/M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/design_matrix.csv"
+output_dir = r"C:/Users/viswa/Documents/M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models"
+
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+
+with open(csv_path, newline='') as csvfile:
+    reader = csv.DictReader(csvfile)
+
+    for row in reader:
+        design_id = row["Design_ID"]
+        length = float(row["Length_mm"])
+        height = float(row["Height_mm"])
+        width = float(row["Width_mm"])
+
+        doc = App.newDocument(design_id)
+
+        # ✅ Create solid beam as a Part Box (X=Length, Y=Height, Z=Width)
+        beam = doc.addObject("Part::Box", "Beam")
+        beam.Length = length   # X-direction
+        beam.Width = height    # Y-direction
+        beam.Height = width    # Z-direction
+
+        doc.recompute()
+
+        # ✅ Save native FreeCAD file
+        fcstd_path = os.path.join(output_dir, f"{design_id}.FCStd")
+        doc.saveAs(fcstd_path)
+
+        # ✅ Export as .STEP
+        step_path = os.path.join(output_dir, f"{design_id}.step")
+        ImportGui.export([beam], step_path)
+
+        App.closeDocument(design_id)
+
+print("✅ SUCCESS: All solid beam models generated using Part::Box!")

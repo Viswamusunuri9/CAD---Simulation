@@ -1,0 +1,67 @@
+# encoding: utf-8
+# 2020 R1
+SetScriptVersion(Version="20.1.164")
+template1 = GetTemplate(
+    TemplateName="Static Structural",
+    Solver="ANSYS")
+system1 = template1.CreateSystem()
+geometry1 = system1.GetContainer(ComponentName="Geometry")
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D17.step"))
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D17.step"))
+modelComponent1 = system1.GetComponent(Name="Model")
+modelComponent1.Refresh()
+model1 = system1.GetContainer(ComponentName="Model")
+model1.Edit()
+engineeringData1 = system1.GetContainer(ComponentName="Engineering Data")
+material1 = engineeringData1.GetMaterial(Name="Structural Steel")
+material1.DisplayName = "ABS"
+matlProp1 = material1.GetProperty(Name="Density")
+matlProp1.SetData(
+    Variables=["Density"],
+    Values=[["1040 [kg m^-3]"]])
+matlProp2 = material1.GetProperty(Name="Elasticity")
+matlProp2.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.35"]])
+matlProp2.SetData(
+    Variables=["Young's Modulus"],
+    Values=[["2000000000 [Pa]"]])
+geometry1.Edit(IsSpaceClaimGeometry=True)
+geometry1.Exit()
+favorites1 = EngData.LoadFavoriteItems()
+material2 = engineeringData1.GetMaterial(Name="ABS plastic 2")
+material2.Delete()
+material3 = engineeringData1.GetMaterial(Name="ABS plastic")
+material3.Delete()
+material4 = engineeringData1.GetMaterial(Name="Water Liquid")
+material4.Delete()
+material1.Delete()
+matl1 = engineeringData1.CreateMaterial(Name="ABS")
+matlProp3 = matl1.CreateProperty(
+    Name="Elasticity",
+    Behavior="Isotropic",
+    Qualifiers={"Definition": "", "Behavior": "Isotropic"})
+matlProp3.SetData(
+    Index=-1,
+    Variables=["Young's Modulus"],
+    Values=[["2000000000 [Pa]"]])
+matlProp3.SetData(
+    Variables=["Poisson's Ratio"],
+    Values=[["0.35"]])
+matlProp4 = matl1.CreateProperty(
+    Name="Density",
+    Qualifiers={"Definition": "", "Behavior": ""})
+matlProp4.SetData(
+    Index=-1,
+    Variables=["Density"],
+    Values=[["1040 [kg m^-3]"]])
+Refresh()
+model1.Edit()
+model1.Edit()
+Save(Overwrite=True)
+Save(Overwrite=True)
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D01.step"))
+geometry1.SetFile(FilePath=GetAbsoluteUserPathName("M Tech/II Year/Project My attempt/CAD & Simulation/Design Data/Generated_Models/D01.step"))
+Save(Overwrite=True)

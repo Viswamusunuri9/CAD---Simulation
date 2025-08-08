@@ -1,0 +1,28 @@
+Design_ID,Length_mm,Height_mm,Width_mm,Load_N,Material,Max_Stress_MPa,Max_Deformation_mm,Simulation_Date,Result_Image_Stress,Result_Image_Deformation,ANSYS_Project_File
+D01,100,10,10,250,ABS,2.74E+00,1.24E-01,08-08-2025,D01_stress.png,D01_deformation.png,D01_simulation.wbpz
+D02,100,10,10,1000,ABS,1.10E+01,4.98E-01,08-08-2025,D02_stress.png,D02_deformation.png,D02_simulation.wbpz
+D03,100,10,10,500,ABS,1.48E+02,3.74E+01,08-08-2025,D03_stress.png,D03_deformation.png,D03_simulation.wbpz
+D04,100,20,10,250,Glass Fiber,1.91E+01,1.63E-01,08-08-2025,D04_stress.png,D04_deformation.png,D04_simulation.wbpz
+D05,100,20,10,750,Carbon Fiber,5.76E+01,2.10E-01,08-08-2025,D05_stress.png,D05_deformation.png,D05_simulation.wbpz
+D06,100,20,10,1000,ABS,7.55E+01,9.71E+00,08-08-2025,D06_stress.png,D06_deformation.png,D06_simulation.wbpz
+D07,100,30,10,250,ABS,9.77E+00,7.66E-01,08-08-2025,D07_stress.png,D07_deformation.png,D07_simulation.wbpz
+D08,100,30,10,1000,Glass Fiber,3.86E+01,2.05E-01,08-08-2025,D08._stress.png,D08_deformation.png,D08_simulation.wbpz
+D09,100,30,10,750,Glass Fiber,2.90E+01,1.53E-01,08-08-2025,D09_stress.png,D09_deformation.png,D09_simulation.wbpz
+D10,120,10,10,250,Glass Fiber,8.58E+01,2.17E+00,08-08-2025,D10_stress.png,D10_deformation.png,D10_simulation.wbpz
+D11,120,10,10,750,Glass Fiber,2.57E+02,6.50E+00,08-08-2025,D11_stress.png,D11_deformation.png,D11_simulation.wbpz
+D12,120,10,10,1000,Glass Fiber,3.43E+02,8.67E+00,08-08-2025,D12_stress.png,D12_deformation.png,D12_simulation.wbpz
+D13,120,20,10,1000,Glass Fiber,8.99E+01,1.11E+00,08-08-2025,D13_stress.png,D13_deformation.png,D13_simulation.wbpz
+D14,120,20,10,250,Carbon Fiber,2.26E+01,1.19E-01,08-08-2025,D14_stress.png,D14deformation.png,D14_simulation.wbpz
+D15,120,20,10,500,ABS,4.47E+01,8.28E+00,08-08-2025,D15_stress.png,D15_deformation.png,D15_simulation.wbpz
+D16,120,30,10,500,Carbon Fiber,2.18E+01,7.35E-02,08-08-2025,D16_stress.png,D16_deformation.png,D16_simulation.wbpz
+D17,120,30,10,750,ABS,3.23E+00,1.49E-01,08-08-2025,D17_stress.png,D17_deformation.png,D17_simulation.wbpz
+D18,120,30,10,1000,ABS,4.35E+01,5.13E+00,08-08-2025,D18_stress.png,D18_deformation.png,D18_simulation.wbpz
+D19,140,10,10,500,ABS,2.08E+02,1.02E+02,08-08-2025,D19_stress.png,D19_deformation.png,D19_simulation.wbpz
+D20,140,10,10,1000,Carbon Fiber,3.98E+02,5.89E+00,08-08-2025,D20_stress.png,D20_deformation.png,D20_simulation.wbpz
+D21,140,10,10,250,ABS,1.04E+02,5.11E+01,08-08-2025,D21_stress.png,D21_deformation.png,D21_simulation.wbpz
+D22,140,20,10,750,ABS,7.89E+01,1.96E+01,08-08-2025,D22_stress.png,D22_deformation.png,D22_simulation.wbpz
+D23,140,20,10,500,Glass Fiber,5.04E+01,8.75E-01,08-08-2025,D23_stress.png,D23_deformation.png,D23_simulation.wbpz
+D24,140,20,10,1000,Carbon Fiber,5.05E+01,3.75E-01,08-08-2025,D24_stress.png,D24_deformation.png,D24_simulation.wbpz
+D25,140,30,10,250,Glass Fiber,1.24E+01,1.34E-01,08-08-2025,D25_stress.png,D25_deformation.png,D25_simulation.wbpz
+D26,140,30,10,500,Carbon Fiber,2.48E+01,1.15E-01,08-08-2025,D26_stress.png,D26_deformation.png,D26_simulation.wbpz
+D27,140,30,10,1000,Glass Fiber,4.95E+01,5.34E-01,08-08-2025,D27_stress.png,D27_deformation.png,D27_simulation.wbpz

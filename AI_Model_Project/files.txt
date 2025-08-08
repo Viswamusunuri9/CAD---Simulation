@@ -1,0 +1,11 @@
+@echo off
+REM ==========================================
+REM Get all file names in the current directory
+REM and save them to file_list.txt
+REM ==========================================
+
+dir /b > file_list.txt
+
+echo.
+echo File names saved to file_list.txt
+pause
