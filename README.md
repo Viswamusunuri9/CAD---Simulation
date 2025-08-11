@@ -17,7 +17,7 @@ Paper and thesis-ready outputs
 # 🏗️ CAD---Simulation: AI Surrogates for Topology Optimization of Composites
 
 This repository supports my **M.Tech thesis and Scopus paper** titled:  
-**"Performance Limits of AI Surrogates for Composite Topology Optimization under Small-Data Constraints"**
+**"Residual-Based Evaluation of AI Surrogates for Composite Topology Optimization under Simulation-Only Small-Data Conditions"**
 
 > 🔗 **Repo:** https://github.com/Viswamusunuri9/CAD---Simulation  
 > 🧑‍💻 Author: Viswa Musunuri  
