@@ -1,6 +1,5 @@
 
 # STEP 3: Train Linear Regression Model for Surrogate Simulation
-# Author: ChatGPT for Viswa (M.Tech Thesis)
 
 # 📦 Required Libraries
 import pandas as pd
