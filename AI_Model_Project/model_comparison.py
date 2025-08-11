@@ -1,4 +1,4 @@
-# model_comparison.py
+# model comparison
 
 import pandas as pd
 import numpy as np

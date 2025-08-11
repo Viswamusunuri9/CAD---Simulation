@@ -1,4 +1,4 @@
-# rf_model.py
+# randomforest model
 
 import pandas as pd
 import numpy as np

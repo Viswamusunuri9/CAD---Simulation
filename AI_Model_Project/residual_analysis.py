@@ -1,4 +1,4 @@
-# residual_analysis.py
+# residual analysis
 
 import pandas as pd
 import numpy as np
